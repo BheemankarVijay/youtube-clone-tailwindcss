@@ -66,7 +66,7 @@ Structuring large UI layouts cleanly
 
 Debugging real responsive design bugs
 
-📂 Folder Structure
+## 📁 Project Structure
 youtube-clone-tailwindcss/
 │
 ├── index.html
@@ -80,18 +80,18 @@ youtube-clone-tailwindcss/
 │   └── banner.png
 └── README.md
 
-📐 Responsive Breakpoints
+## 📐 Responsive Breakpoints
 Device	Tailwind Prefix
 Mobile	Default (<768px)
 Tablet	md (≥768px)
 Desktop	lg (≥1024px)
 🛠️ Tech Stack
-Technology	Purpose
+## Technology	Purpose
 HTML5	Structure
 Tailwind CSS	Styling & Responsive Design
 Font Awesome	Icons
 Git & GitHub	Version Control
-🚀 Future Improvements
+## 🚀 Future Improvements
 
 🔹 Add JavaScript interactions
 
