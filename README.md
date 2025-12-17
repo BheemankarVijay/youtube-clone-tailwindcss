@@ -1,7 +1,7 @@
-📺 YouTube Clone – Tailwind CSS (Responsive UI)
+#📺 YouTube Clone – Tailwind CSS (Responsive UI)
 
 <p align="center"> <img src="https://img.shields.io/badge/HTML5-Markup-orange?logo=html5&logoColor=white" /> <img src="https://img.shields.io/badge/TailwindCSS-Utility--First-blue?logo=tailwindcss&logoColor=white" /> <img src="https://img.shields.io/badge/Responsive%20Design-Mobile%20|%20Tablet%20|%20Desktop-green" /> <img src="https://img.shields.io/badge/Font%20Awesome-Icons-purple?logo=fontawesome&logoColor=white" /> </p>
-📱 Responsive Preview
+#📱 Responsive Preview
 ## 📱 Responsive Preview
 
 ### 📱 Mobile View
@@ -20,7 +20,7 @@ The goal of this project was to master real-world responsive layouts without rel
 
 Key Focus Areas:
 
-📐 Layout structure (Header, Sidebar, Main, Footer)
+##📐 Layout structure (Header, Sidebar, Main, Footer)
 
 📱 Mobile-first responsive design
 
@@ -30,7 +30,7 @@ Key Focus Areas:
 
 🚫 Avoiding overflow & width issues
 
-✨ Features
+##✨ Features
 
 ✅ Sticky top navigation bar
 
@@ -48,7 +48,7 @@ Key Focus Areas:
 
 ✅ Mobile / Tablet / Desktop support
 
-🧠 What I Learned
+##🧠 What I Learned
 
 Proper use of flex, grid, and flex-1
 
@@ -67,17 +67,21 @@ Structuring large UI layouts cleanly
 Debugging real responsive design bugs
 
 ## 📁 Project Structure
+
+```bash
 youtube-clone-tailwindcss/
 │
 ├── index.html
 ├── images/
-│   ├── thumbnails
-│   └── avatars
+│   ├── thumbnails/
+│   └── avatars/
+│
 ├── screenshots/
 │   ├── mobile.png
 │   ├── tablet.png
 │   ├── desktop.png
 │   └── banner.png
+│
 └── README.md
 
 ## 📐 Responsive Breakpoints
