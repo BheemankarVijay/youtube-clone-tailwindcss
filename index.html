@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Clone</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-black overflow-x-hidden ">
+    <header class="sticky top-0 z-50 bg-black w-full">
+      <nav
+        class="sticky top-0 z-50 bg-black text-white w-full h-16 flex items-center justify-between px-4"
+      >
+        <!-- left -->
+        <div class="flex items-center gap-4">
+          <i class="fa-solid fa-bars fa-lg"></i>
+
+          <div class="flex items-center gap-1">
+            <i class="fa-brands fa-youtube text-red-500 text-2xl"></i>
+            <span class="font-semibold text-lg">YouTube</span>
+          </div>
+        </div>
+        <!-- middle -->
+        <div class="hidden md:flex items-center flex-1 max-w-2xl mx-4">
+          <input
+            type="text"
+            placeholder="Search"
+            class="flex-1 bg-black text-white border border-gray-600 rounded-l-full px-4 py-1 outline-none focus:border-white"
+          />
+
+          <div
+            class="bg-gray-800 px-4 py-1 border border-gray-600 rounded-r-full hover:border-white cursor-pointer"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+
+          <div
+            class="ml-3 w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center hover:bg-gray-800 cursor-pointer"
+          >
+            <i class="fa-solid fa-microphone"></i>
+          </div>
+        </div>
+        <!-- right -->
+        <div class="flex items-center gap-4">
+          <div
+            class="hidden md:flex items-center gap-1 px-2 py-1 border border-gray-600 rounded-full hover:bg-gray-800 cursor-pointer"
+          >
+            <i class="fa-solid fa-plus"></i>
+            <span class="pb-1">Create</span>
+          </div>
+
+          <i class="fa-regular fa-bell fa-xl cursor-pointer"></i>
+
+          <div
+            class="w-8 h-8 bg-gray-800 rounded-full border border-gray-600 flex items-center justify-center cursor-pointer"
+          >
+            <i class="fa-regular fa-user"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="bg-black flex w-full">
+      <!--Left side icons-->
+      <aside class="hidden md:block w-16 min-h-screen">
+        <div class="sticky top-14 z-40 flex flex-col gap-6 p-4 text-white">
+          <div class="flex flex-col items-center gap-1 p-2 px-5">
+            <i class="fa-solid fa-house fa-xl"></i>
+            <span class="text-xs mt-3">Home</span>
+          </div>
+
+          <div class="flex flex-col items-center gap-1 p-2 px-5">
+            <i class="fa-solid fa-play fa-xl"></i>
+            <span class="text-xs mt-3">Shorts</span>
+          </div>
+
+          <div class="flex flex-col items-center gap-1 p-2 px-5">
+            <i class="fa-solid fa-tv fa-xl"></i>
+            <span class="text-xs mt-3">Subscriptions</span>
+          </div>
+
+          <div class="flex flex-col items-center gap-1 p-2 px-5">
+            <i class="fa-regular fa-user fa-xl"></i>
+            <span class="text-xs mt-3">You</span>
+          </div>
+        </div>
+      </aside>
+      <main class="flex-1 w-full bg-black pb-16 md:pb-0">
+        <!-- category bar -->
+        <div class="sticky top-16 z-40 bg-black border-gray-800 w-full overflow-x-hidden ">
+          <div class="flex text-white gap-3 px-4 py-2 overflow-x-auto whitespace-nowrap">
+            <span class="bg-gray-800 px-4 py-1 rounded-full text-sm">All</span>
+            <span class="bg-gray-800 px-4 py-1 rounded-full text-sm"
+              >Music</span
+            >
+            <span class="bg-gray-900 px-4 py-1 rounded-full text-sm"
+              >Web Development</span
+            >
+            <span class="bg-gray-900 px-4 py-1 rounded-full text-sm"
+              >Data Science</span
+            >
+            <span class="bg-gray-900 px-4 py-1 rounded-full text-sm"
+              >Data Structure</span
+            >
+            <span class="bg-gray-900 px-4 py-1 rounded-full text-sm"
+              >Gaming</span
+            >
+            <span class="bg-gray-900 px-4 py-1 rounded-full text-sm"
+              >Animation</span
+            >
+            <span class="bg-gray-900 px-4 py-1 rounded-full text-sm"
+              >Machine Learning</span
+            >
+            <span class="bg-gray-900 px-4 py-1 rounded-full text-sm"
+              >Python</span
+            >
+            <span class="bg-gray-900 px-4 py-1 rounded-full text-sm">IPL</span>
+            <span class="bg-gray-900 px-4 py-1 rounded-full text-sm"
+              >Spider-Man</span
+            >
+            <span class="bg-gray-900 px-4 py-1 rounded-full text-sm"
+              >Nature</span
+            >
+            <span class="bg-gray-900 px-4 py-1 rounded-full text-sm"
+              >Summer camp</span
+            >
+          </div>
+        </div>
+        <!-- video grid -->
+        <div
+          class="px-4 py-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+        >
+          <!-- VIDEO CARD -->
+          <div class="cursor-pointer space-y-2">
+            <!-- THUMBNAIL ONLY -->
+            <div
+              class="aspect-video rounded-xl overflow-hidden md:hover:rounded-none transition-all duration-200"
+            >
+              <img
+                src="images/video1.avif"
+                alt="video thumbnail"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- VIDEO INFO (OUTSIDE aspect-video) -->
+            <div class="flex gap-3 mt-2">
+              <!-- Channel avatar -->
+              <div
+                class="w-10 h-10 rounded-full bg-[url('images/video1.avif')] bg-cover bg-center"
+              ></div>
+
+              <!-- Text -->
+              <div>
+                <p
+                  class="text-sm text-white font-semibold leading-snug line-clamp-2"
+                >
+                  What If Sung Jin-woo Was In JuJutsu Kaisen
+                </p>
+                <p class="text-xs text-gray-400 mt-1">BronGod</p>
+                <p class="text-xs text-gray-400">12K views • 3 days ago</p>
+              </div>
+            </div>
+          </div>
+          <!-- VIDEO CARD -->
+          <div class="cursor-pointer space-y-2">
+            <!-- THUMBNAIL ONLY -->
+            <div
+              class="aspect-video rounded-xl overflow-hidden hover:rounded-none transition-all duration-200"
+            >
+              <img
+                src="images/v2.avif"
+                alt="video thumbnail"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- VIDEO INFO (OUTSIDE aspect-video) -->
+            <div class="flex gap-3 mt-2">
+              <!-- Channel avatar -->
+              <div
+                class="w-10 h-10 rounded-full bg-[url('images/v2.avif')] bg-cover bg-center"
+              ></div>
+
+              <!-- Text -->
+              <div>
+                <p
+                  class="text-sm text-white font-semibold leading-snug line-clamp-2"
+                >
+                  Sadie Sink - The Song (Love Is All) (From "O'Dessa") Official
+                  Music Video
+                </p>
+                <p class="text-xs text-gray-400 mt-1">HollywoodRecordsVEVU</p>
+                <p class="text-xs text-gray-400">30K views • 3 days ago</p>
+              </div>
+            </div>
+          </div>
+          <!-- VIDEO CARD -->
+          <div class="cursor-pointer space-y-2">
+            <!-- THUMBNAIL ONLY -->
+            <div
+              class="aspect-video rounded-xl overflow-hidden hover:rounded-none transition-all duration-200"
+            >
+              <img
+                src="images/v4.avif"
+                alt="video thumbnail"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- VIDEO INFO (OUTSIDE aspect-video) -->
+            <div class="flex gap-3 mt-2">
+              <!-- Channel avatar -->
+              <div
+                class="w-10 h-10 rounded-full bg-[url('images/unnamed.jpg')] bg-cover bg-center"
+              ></div>
+
+              <!-- Text -->
+              <div>
+                <p
+                  class="text-sm text-white font-semibold leading-snug line-clamp-2"
+                >
+                  Everyone is Lying — Dark Sides of Vibe Coding 😢
+                </p>
+                <p class="text-xs text-gray-400 mt-1">CodeWithMe</p>
+                <p class="text-xs text-gray-400">50K views • 3 days ago</p>
+              </div>
+            </div>
+          </div>
+          <!-- VIDEO CARD -->
+          <div class="cursor-pointer space-y-2">
+            <!-- THUMBNAIL ONLY -->
+            <div
+              class="aspect-video rounded-xl overflow-hidden hover:rounded-none transition-all duration-200"
+            >
+              <img
+                src="images/v6.avif"
+                alt="video thumbnail"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- VIDEO INFO (OUTSIDE aspect-video) -->
+            <div class="flex gap-3 mt-2">
+              <!-- Channel avatar -->
+              <div
+                class="w-10 h-10 rounded-full bg-[url('images/i5.jpg')] bg-cover bg-center"
+              ></div>
+
+              <!-- Text -->
+              <div>
+                <p
+                  class="text-sm text-white font-semibold leading-snug line-clamp-2"
+                >
+                  Build Spotify With Flutter - Bloc , Clean Architecture ,
+                  Firebase , Figma
+                </p>
+                <p class="text-xs text-gray-400 mt-1">Futter Guys</p>
+                <p class="text-xs text-gray-400">20K views • 10 days ago</p>
+              </div>
+            </div>
+          </div>
+          <!-- VIDEO CARD -->
+          <div class="cursor-pointer space-y-2">
+            <!-- THUMBNAIL ONLY -->
+            <div
+              class="aspect-video rounded-xl overflow-hidden hover:rounded-none transition-all duration-200"
+            >
+              <img
+                src="images/v7.avif"
+                alt="video thumbnail"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- VIDEO INFO (OUTSIDE aspect-video) -->
+            <div class="flex gap-3 mt-2">
+              <!-- Channel avatar -->
+              <div
+                class="w-10 h-10 rounded-full bg-[url('images/i6.jpg')] bg-cover bg-center"
+              ></div>
+
+              <!-- Text -->
+              <div>
+                <p
+                  class="text-sm text-white font-semibold leading-snug line-clamp-2"
+                >
+                  IRIS OUT x REZE DANCE edit
+                </p>
+                <p class="text-xs text-gray-400 mt-1">MusicXD</p>
+                <p class="text-xs text-gray-400">45K views • 4 days ago</p>
+              </div>
+            </div>
+          </div>
+          <!-- VIDEO CARD -->
+          <div class="cursor-pointer space-y-2">
+            <!-- THUMBNAIL ONLY -->
+            <div
+              class="aspect-video rounded-xl overflow-hidden hover:rounded-none transition-all duration-200"
+            >
+              <img
+                src="images/v8.avif"
+                alt="video thumbnail"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- VIDEO INFO (OUTSIDE aspect-video) -->
+            <div class="flex gap-3 mt-2">
+              <!-- Channel avatar -->
+              <div
+                class="w-10 h-10 rounded-full bg-[url('images/i7.jpg')] bg-cover bg-center"
+              ></div>
+
+              <!-- Text -->
+              <div>
+                <p
+                  class="text-sm text-white font-semibold leading-snug line-clamp-2"
+                >
+                  JavaScript Tutorial (2024) for Beginners to Pro (with Notes,
+                  Projects & Practice Questions)
+                </p>
+                <p class="text-xs text-gray-400 mt-1">MusicXD</p>
+                <p class="text-xs text-gray-400">50K views • 7 days ago</p>
+              </div>
+            </div>
+          </div>
+          <!-- VIDEO CARD -->
+          <div class="cursor-pointer space-y-2">
+            <!-- THUMBNAIL ONLY -->
+            <div
+              class="aspect-video rounded-xl overflow-hidden hover:rounded-none transition-all duration-200"
+            >
+              <img
+                src="images/video1.avif"
+                alt="video thumbnail"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- VIDEO INFO (OUTSIDE aspect-video) -->
+            <div class="flex gap-3 mt-2">
+              <!-- Channel avatar -->
+              <div
+                class="w-10 h-10 rounded-full bg-[url('images/video1.avif')] bg-cover bg-center"
+              ></div>
+
+              <!-- Text -->
+              <div>
+                <p
+                  class="text-sm text-white font-semibold leading-snug line-clamp-2"
+                >
+                  What If Sung Jin-woo Was In JuJutsu Kaisen
+                </p>
+                <p class="text-xs text-gray-400 mt-1">BronGod</p>
+                <p class="text-xs text-gray-400">12K views • 3 days ago</p>
+              </div>
+            </div>
+          </div>
+          <!-- VIDEO CARD -->
+          <div class="cursor-pointer space-y-2">
+            <!-- THUMBNAIL ONLY -->
+            <div
+              class="aspect-video rounded-xl overflow-hidden hover:rounded-none transition-all duration-200"
+            >
+              <img
+                src="images/v2.avif"
+                alt="video thumbnail"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- VIDEO INFO (OUTSIDE aspect-video) -->
+            <div class="flex gap-3 mt-2">
+              <!-- Channel avatar -->
+              <div
+                class="w-10 h-10 rounded-full bg-[url('images/v2.avif')] bg-cover bg-center"
+              ></div>
+
+              <!-- Text -->
+              <div>
+                <p
+                  class="text-sm text-white font-semibold leading-snug line-clamp-2"
+                >
+                  Sadie Sink - The Song (Love Is All) (From "O'Dessa") Official
+                  Music Video
+                </p>
+                <p class="text-xs text-gray-400 mt-1">HollywoodRecordsVEVU</p>
+                <p class="text-xs text-gray-400">30K views • 3 days ago</p>
+              </div>
+            </div>
+          </div>
+          <!-- VIDEO CARD -->
+          <div class="cursor-pointer space-y-2">
+            <!-- THUMBNAIL ONLY -->
+            <div
+              class="aspect-video rounded-xl overflow-hidden hover:rounded-none transition-all duration-200"
+            >
+              <img
+                src="images/v4.avif"
+                alt="video thumbnail"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- VIDEO INFO (OUTSIDE aspect-video) -->
+            <div class="flex gap-3 mt-2">
+              <!-- Channel avatar -->
+              <div
+                class="w-10 h-10 rounded-full bg-[url('images/unnamed.jpg')] bg-cover bg-center"
+              ></div>
+
+              <!-- Text -->
+              <div>
+                <p
+                  class="text-sm text-white font-semibold leading-snug line-clamp-2"
+                >
+                  Everyone is Lying — Dark Sides of Vibe Coding 😢
+                </p>
+                <p class="text-xs text-gray-400 mt-1">CodeWithMe</p>
+                <p class="text-xs text-gray-400">50K views • 3 days ago</p>
+              </div>
+            </div>
+          </div>
+          <!-- VIDEO CARD -->
+          <div class="cursor-pointer space-y-2">
+            <!-- THUMBNAIL ONLY -->
+            <div
+              class="aspect-video rounded-xl overflow-hidden hover:rounded-none transition-all duration-200"
+            >
+              <img
+                src="images/v6.avif"
+                alt="video thumbnail"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- VIDEO INFO (OUTSIDE aspect-video) -->
+            <div class="flex gap-3 mt-2">
+              <!-- Channel avatar -->
+              <div
+                class="w-10 h-10 rounded-full bg-[url('images/i5.jpg')] bg-cover bg-center"
+              ></div>
+
+              <!-- Text -->
+              <div>
+                <p
+                  class="text-sm text-white font-semibold leading-snug line-clamp-2"
+                >
+                  Build Spotify With Flutter - Bloc , Clean Architecture ,
+                  Firebase , Figma
+                </p>
+                <p class="text-xs text-gray-400 mt-1">Futter Guys</p>
+                <p class="text-xs text-gray-400">20K views • 10 days ago</p>
+              </div>
+            </div>
+          </div>
+          <!-- VIDEO CARD -->
+          <div class="cursor-pointer space-y-2">
+            <!-- THUMBNAIL ONLY -->
+            <div
+              class="aspect-video rounded-xl overflow-hidden hover:rounded-none transition-all duration-200"
+            >
+              <img
+                src="images/v7.avif"
+                alt="video thumbnail"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- VIDEO INFO (OUTSIDE aspect-video) -->
+            <div class="flex gap-3 mt-2">
+              <!-- Channel avatar -->
+              <div
+                class="w-10 h-10 rounded-full bg-[url('images/i6.jpg')] bg-cover bg-center"
+              ></div>
+
+              <!-- Text -->
+              <div>
+                <p
+                  class="text-sm text-white font-semibold leading-snug line-clamp-2"
+                >
+                  IRIS OUT x REZE DANCE edit
+                </p>
+                <p class="text-xs text-gray-400 mt-1">MusicXD</p>
+                <p class="text-xs text-gray-400">45K views • 4 days ago</p>
+              </div>
+            </div>
+          </div>
+          <!-- VIDEO CARD -->
+          <div class="cursor-pointer space-y-2">
+            <!-- THUMBNAIL ONLY -->
+            <div
+              class="aspect-video rounded-xl overflow-hidden hover:rounded-none transition-all duration-200"
+            >
+              <img
+                src="images/v8.avif"
+                alt="video thumbnail"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- VIDEO INFO (OUTSIDE aspect-video) -->
+            <div class="flex gap-3 mt-2">
+              <!-- Channel avatar -->
+              <div
+                class="w-10 h-10 rounded-full bg-[url('images/i7.jpg')] bg-cover bg-center"
+              ></div>
+
+              <!-- Text -->
+              <div>
+                <p
+                  class="text-sm text-white font-semibold leading-snug line-clamp-2"
+                >
+                  JavaScript Tutorial (2024) for Beginners to Pro (with Notes,
+                  Projects & Practice Questions)
+                </p>
+                <p class="text-xs text-gray-400 mt-1">MusicXD</p>
+                <p class="text-xs text-gray-400">50K views • 7 days ago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Mobile Bottom Navbar -->
+    <div
+      class="fixed  bottom-0 left-0 right-0  bg-black  border-t border-gray-800 md:hidden"
+    >
+      <div class="flex justify-around items-center h-16 py-2 text-white text-xs">
+        <div class="flex flex-col items-center">
+          <i class="fa-solid fa-house fa-lg pb-1"></i>
+          <span>Home</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <i class="fa-solid fa-play fa-lg pb-1"></i>
+          <span>Shorts</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <i class="fa-regular fa-user fa-lg pb-1 "></i>
+          <span>You</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
