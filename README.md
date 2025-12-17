@@ -80,7 +80,8 @@ youtube-clone-tailwindcss/
 │   └── banner.png
 │
 └── README.md
----
+```
+
 
 ## 📐 Responsive Breakpoints
 Device	Tailwind Prefix
