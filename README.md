@@ -84,10 +84,12 @@ youtube-clone-tailwindcss/
 
 
 ## 📐 Responsive Breakpoints
+```bash
 Device	Tailwind Prefix
 Mobile	Default (<768px)
 Tablet	md (≥768px)
 Desktop	lg (≥1024px)
+```
 ## 🛠️ Tech Stack
 Technology	Purpose
 HTML5	Structure
