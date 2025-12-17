@@ -1,7 +1,14 @@
-#📺 YouTube Clone – Tailwind CSS (Responsive UI)
+# 📺 YouTube Clone – Tailwind CSS (Responsive UI)
 
-<p align="center"> <img src="https://img.shields.io/badge/HTML5-Markup-orange?logo=html5&logoColor=white" /> <img src="https://img.shields.io/badge/TailwindCSS-Utility--First-blue?logo=tailwindcss&logoColor=white" /> <img src="https://img.shields.io/badge/Responsive%20Design-Mobile%20|%20Tablet%20|%20Desktop-green" /> <img src="https://img.shields.io/badge/Font%20Awesome-Icons-purple?logo=fontawesome&logoColor=white" /> </p>
-#📱 Responsive Preview
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-Markup-orange?logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/TailwindCSS-Utility--First-blue?logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/Responsive%20Design-Mobile%20|%20Tablet%20|%20Desktop-green" />
+  <img src="https://img.shields.io/badge/Font%20Awesome-Icons-purple?logo=fontawesome&logoColor=white" />
+</p>
+
+---
+
 ## 📱 Responsive Preview
 
 ### 📱 Mobile View
@@ -13,58 +20,48 @@
 ### 💻 Desktop View
 ![Desktop View](screenshots/desktop.png)
 
-📌 Project Overview
+---
 
-This project is a fully responsive YouTube UI clone built using Tailwind CSS.
-The goal of this project was to master real-world responsive layouts without relying on tutorials.
+## 📌 Project Overview
 
-Key Focus Areas:
+This project is a **fully responsive YouTube UI clone** built using **Tailwind CSS**.
 
-##📐 Layout structure (Header, Sidebar, Main, Footer)
+The goal of this project was to **master real-world responsive layouts** without relying on tutorials.
 
-📱 Mobile-first responsive design
+### 🎯 Key Focus Areas
+- Layout structure (Header, Sidebar, Main, Footer)
+- Mobile-first responsive design
+- Flexbox & Grid mastery
+- Sticky & fixed UI components
+- Avoiding overflow & width issues
 
-🧩 Flexbox & Grid mastery
+---
 
-🎯 Sticky & fixed UI components
+## ✨ Features
 
-🚫 Avoiding overflow & width issues
+- ✅ Sticky top navigation bar  
+- ✅ Desktop sidebar navigation  
+- ✅ Mobile bottom navigation bar  
+- ✅ Horizontally scrollable category bar  
+- ✅ Responsive video grid  
+- ✅ Video cards with thumbnails & metadata  
+- ✅ Clean Tailwind utility-based styling  
+- ✅ Mobile / Tablet / Desktop support  
 
-##✨ Features
+---
 
-✅ Sticky top navigation bar
+## 🧠 What I Learned
 
-✅ Desktop sidebar navigation
+- Proper use of `flex`, `grid`, and `flex-1`
+- Difference between `w-full` and `flex-1`
+- Handling horizontal scroll (`overflow-x-auto`)
+- Fixing mobile overflow issues
+- Sticky vs fixed positioning
+- Mobile-first responsive thinking
+- Structuring large UI layouts cleanly
+- Debugging real responsive design bugs
 
-✅ Mobile bottom navigation bar
-
-✅ Horizontally scrollable category bar
-
-✅ Responsive video grid
-
-✅ Video cards with thumbnails & metadata
-
-✅ Clean Tailwind utility-based styling
-
-✅ Mobile / Tablet / Desktop support
-
-##🧠 What I Learned
-
-Proper use of flex, grid, and flex-1
-
-Difference between w-full and flex-1
-
-Handling horizontal scroll (overflow-x-auto)
-
-Fixing mobile overflow issues
-
-Sticky vs fixed positioning
-
-Mobile-first responsive thinking
-
-Structuring large UI layouts cleanly
-
-Debugging real responsive design bugs
+---
 
 ## 📁 Project Structure
 
@@ -83,14 +80,15 @@ youtube-clone-tailwindcss/
 │   └── banner.png
 │
 └── README.md
+---
 
 ## 📐 Responsive Breakpoints
 Device	Tailwind Prefix
 Mobile	Default (<768px)
 Tablet	md (≥768px)
 Desktop	lg (≥1024px)
-🛠️ Tech Stack
-## Technology	Purpose
+## 🛠️ Tech Stack
+Technology	Purpose
 HTML5	Structure
 Tailwind CSS	Styling & Responsive Design
 Font Awesome	Icons
