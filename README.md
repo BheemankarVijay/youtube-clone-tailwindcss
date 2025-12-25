@@ -26,7 +26,7 @@
 
 This project is a **fully responsive YouTube UI clone** built using **Tailwind CSS**.
 
-The goal of this project was to **master real-world responsive layouts** without relying on tutorials.
+The goal of this project was to **master real-world responsive layouts** 
 
 ### 🎯 Key Focus Areas
 - Layout structure (Header, Sidebar, Main, Footer)
